@@ -1,0 +1,15 @@
+package Concurrency.WaitNotify;
+
+/**
+ * sometimes, we have buffers between threads, so the buffer is where tasks are
+ * put by thread 1 and thread 2 receives these tasks from the buffer
+ * For this workflow, we need communication between threads, so they know,
+ * when to start: wait() and notify()
+ */
+public class Main {
+    public volatile int value;
+    /*
+    volatile means, that the stuff is stored in the main RAM-memory directly, instead of using the cache of
+    a single thread, ensuring the consistency of a variable across all threads
+     */
+}
