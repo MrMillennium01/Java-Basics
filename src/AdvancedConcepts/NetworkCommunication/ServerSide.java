@@ -1,4 +1,4 @@
 package AdvancedConcepts.NetworkCommunication;
 
-public class Main {
+public class ServerSide {
 }
