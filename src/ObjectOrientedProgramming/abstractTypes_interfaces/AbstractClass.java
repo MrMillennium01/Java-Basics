@@ -1,4 +1,4 @@
-package abstractTypes_interfaces;
+package ObjectOrientedProgramming.abstractTypes_interfaces;
 
 /**
  * Java has garbage collectors to manage memories - different to C, which is a hassle

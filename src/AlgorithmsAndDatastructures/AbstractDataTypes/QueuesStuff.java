@@ -1,4 +1,4 @@
-package DataStructures.AbstractDataTypes;
+package AlgorithmsAndDatastructures.AbstractDataTypes;
 
 /**
  * FIFO: the first elements going in, also go out

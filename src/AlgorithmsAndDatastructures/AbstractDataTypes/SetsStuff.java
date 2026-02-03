@@ -1,4 +1,4 @@
-package DataStructures.AbstractDataTypes;
+package AlgorithmsAndDatastructures.AbstractDataTypes;
 
 /**
  * These are basically unordered Arrays without duplicates

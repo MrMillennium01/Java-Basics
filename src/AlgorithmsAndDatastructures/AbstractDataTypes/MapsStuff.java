@@ -1,4 +1,4 @@
-package DataStructures.AbstractDataTypes;
+package AlgorithmsAndDatastructures.AbstractDataTypes;
 
 /**
  * Unordered dataset containing tuples with key and value

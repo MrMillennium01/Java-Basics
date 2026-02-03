@@ -1,4 +1,4 @@
-package Concurrency.WaitNotify;
+package AdvancedConcepts.Concurrency.WaitNotify;
 
 /**
  * sometimes, we have buffers between threads, so the buffer is where tasks are

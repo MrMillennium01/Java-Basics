@@ -1,3 +1,5 @@
+package ObjectOrientedProgramming;
+
 /**
  * Every Class is a subclass of the Main Class "Object"
  * So everything inherits properties from there automatically

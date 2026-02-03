@@ -1,4 +1,4 @@
-package Concurrency.Locking;
+package AdvancedConcepts.Concurrency.Locking;
 
 /**
  * sometimes you want a thread to have exclusive access to memory for security

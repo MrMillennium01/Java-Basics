@@ -1,4 +1,4 @@
-package abstractTypes_interfaces;
+package ObjectOrientedProgramming.abstractTypes_interfaces;
 
 /**
  * We have another problem: classes can only have one parent class

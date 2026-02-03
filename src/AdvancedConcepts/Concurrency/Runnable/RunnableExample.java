@@ -1,4 +1,11 @@
 package AdvancedConcepts.Concurrency.Runnable;
 
-public class RunnableExample {
+import java.time.LocalTime;
+
+public class RunnableExample implements Runnable{
+    @Override
+    public void run() {
+        LocalTime start = LocalTime.now();
+        System.out.println("Here happens some stuff at " + start);
+    }
 }

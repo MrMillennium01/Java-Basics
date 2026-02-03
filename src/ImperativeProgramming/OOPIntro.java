@@ -1,3 +1,5 @@
+package ImperativeProgramming;
+
 /**
  * Classes vs Objects/Instances
  * Classes are blueprints, so only the structure of something

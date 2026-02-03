@@ -1,4 +1,4 @@
-package abstractTypes_interfaces;
+package ObjectOrientedProgramming.abstractTypes_interfaces;
 
 /**
  * We have another problem: You want to switch between some cases (more than 2)

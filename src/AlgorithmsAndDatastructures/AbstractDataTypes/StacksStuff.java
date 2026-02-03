@@ -1,4 +1,4 @@
-package DataStructures.AbstractDataTypes;
+package AlgorithmsAndDatastructures.AbstractDataTypes;
 
 /**
  * The opposite of FIFO => LIFO => Last in, first out

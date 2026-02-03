@@ -1,3 +1,5 @@
+package ObjectOrientedProgramming;
+
 public class ObjectInheritance {
     public static void main(String[] args){
         OfficeBuilding meins = new OfficeBuilding(2323464, 3243, "Bahnhof", "Li");

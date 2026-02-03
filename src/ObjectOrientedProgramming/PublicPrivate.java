@@ -1,3 +1,5 @@
+package ObjectOrientedProgramming;
+
 /**
  * this class is public, but most of its variables are private
  */

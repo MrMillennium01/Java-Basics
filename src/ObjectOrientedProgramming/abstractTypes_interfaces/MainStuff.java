@@ -1,4 +1,4 @@
-package abstractTypes_interfaces;
+package ObjectOrientedProgramming.abstractTypes_interfaces;
 
 import java.util.Arrays;
 

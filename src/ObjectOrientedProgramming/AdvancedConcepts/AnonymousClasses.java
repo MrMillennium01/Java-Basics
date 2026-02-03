@@ -1,6 +1,4 @@
-package AdvancedConcepts;
-
-import abstractTypes_interfaces.AbstractClass;
+package ObjectOrientedProgramming.AdvancedConcepts;
 
 /**
  * Sometimes we need some throw-away classes - we can just easily implement them on the fly:

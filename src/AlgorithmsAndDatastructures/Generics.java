@@ -1,5 +1,6 @@
+package AlgorithmsAndDatastructures;
+
 import java.util.ArrayList;
-import java.util.Objects;
 
 /**
  * hierarchical structure with parent-child-relation BUT THIS TIME WITH GENERICS IT

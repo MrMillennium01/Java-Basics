@@ -1,4 +1,4 @@
-package AdvancedConcepts;
+package ObjectOrientedProgramming.AdvancedConcepts;
 
 /**
  * You can define classes in classes and also classes in methods (wtf?!)

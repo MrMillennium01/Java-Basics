@@ -1,4 +1,4 @@
-package Concurrency.Basics;
+package AdvancedConcepts.Concurrency.Basics;
 
 import java.time.LocalTime;
 

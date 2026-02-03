@@ -1,51 +1,41 @@
 package AdvancedConcepts.NetworkCommunication;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.ServerSocket;
+import java.io.*;
 import java.net.Socket;
+import java.util.Scanner;
 
 /**
- * there are multiple layers in network communication:
- *      the 2 highest layers can be accessed by Java: HTTP (higher) and UDP/TCP (lower)
- * addressing based on URL: host:port/path
- *    - host: IP-address or part if URL-address (e.g. google.com / perplexity.ai)
- *      to IP-address via DNS-server -> DNS server knows everything
- *    - port: some integer which can be omitted if it's the default number of a
- *      particular protocol (e.g. 80 for HTTP, 443 for HTTPS)
- *    - path: additional information: (/path-to-a-website/index/some-website)
- * servers can be 2 things:
- *    - software
- *    - hardware
- * Sockets: a class which accesses a server for us (we are clients)
- * Serversockets: a class that hosts a server for outside clients (we are hosts)
- *    => servers are always multithreaded (concurrent)
- * But mostly, we don't use the low-level stuff, but more high-level stuff
- *   for example APIs etc.
+ * this example is the client-side of a TCP/IP connection, so here, it sends stuff
+ * to a local Server (see: ServerSide)
  */
-public class Main {
-    public static void main(String[] args) throws IOException {
-        // starting a server on local
-        ServerSocket server = new ServerSocket(8080);
-        // connecting to local stuff: localhost = 127.0.0.1
-        Socket s1 = new Socket("localhost", 8080);
+public class ClientSide implements Runnable {
+    public void run() {
+        try (Socket client = new Socket("localhost", 8080);)
+        {
+            OutputStream clientRequest = client.getOutputStream();
+            BufferedWriter clientRequestWriter = new BufferedWriter(new OutputStreamWriter(clientRequest));
 
-        try {
-            // connecting to network, here for getting time
-            Socket s2 = new Socket("time.nist.gov", 13);
+            InputStream serverResponse = client.getInputStream();
+            BufferedReader serverResponseReader = new BufferedReader(new InputStreamReader(serverResponse));
 
-            // get input from socket
-            InputStream in = s2.getInputStream();
+            Scanner terminalScanner = new Scanner(System.in);
+            System.out.println("[CLIENT] Please write your request. To stop, just enter: ");
+            String request = terminalScanner.nextLine();
 
-            BufferedReader br = new BufferedReader(new InputStreamReader(in));
-            String line = "";
+            while (request != null) {
+                System.out.println("[CLIENT] Please write your request. To stop, just enter: ");
+                request = terminalScanner.nextLine();
 
-            while ((line = br.readLine()) != null) {
-                System.out.println(line);
+                clientRequestWriter.write(request);
+                clientRequestWriter.newLine();
+                clientRequestWriter.flush();
+                System.out.println("[CLIENT] Request <" + request + "> sent");
+
+                String response = serverResponseReader.readLine();
+                System.out.println("[CLIENT] Server response is: " + response);
             }
-            s2.close();
-        } catch (IOException a){}
+            terminalScanner.close();
+
+        } catch (IOException e){}
     }
 }

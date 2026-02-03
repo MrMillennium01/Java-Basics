@@ -1,4 +1,4 @@
-package BasicConcepts;
+package ObjectOrientedProgramming.BasicConcepts;
 
 /**
  * the JVM first loads and prepares all the classes with their necessary stuff

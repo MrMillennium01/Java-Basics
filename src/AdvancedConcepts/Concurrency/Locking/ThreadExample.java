@@ -1,6 +1,4 @@
-package Concurrency.Locking;
-
-import java.time.LocalTime;
+package AdvancedConcepts.Concurrency.Locking;
 
 /**
  * synchronized

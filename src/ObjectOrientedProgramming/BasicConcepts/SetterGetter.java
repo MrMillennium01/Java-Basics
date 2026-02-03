@@ -1,4 +1,4 @@
-package BasicConcepts;
+package ObjectOrientedProgramming.BasicConcepts;
 
 public class SetterGetter {
     public static void main(String[] args){

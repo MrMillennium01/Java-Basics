@@ -1,3 +1,5 @@
+package ObjectOrientedProgramming;
+
 import java.nio.charset.StandardCharsets;
 
 public class StringClass {

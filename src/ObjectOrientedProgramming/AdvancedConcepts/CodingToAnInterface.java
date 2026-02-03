@@ -1,4 +1,4 @@
-package AdvancedConcepts;
+package ObjectOrientedProgramming.AdvancedConcepts;
 
 /**
  * For interfaces and abstract classes:

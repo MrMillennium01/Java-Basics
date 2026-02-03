@@ -1,4 +1,4 @@
-package Concurrency.Locking;
+package AdvancedConcepts.Concurrency.Locking;
 
 /**
  * Problem: If threads run concurrently (and have locked access to a data)

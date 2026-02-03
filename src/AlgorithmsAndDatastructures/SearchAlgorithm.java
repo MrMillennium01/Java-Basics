@@ -1,7 +1,6 @@
-package Algorithms;
+package AlgorithmsAndDatastructures;
 
 import java.util.Arrays;
-import java.util.ArrayList;
 
 public class SearchAlgorithm {
     public static void main(String[] args){
