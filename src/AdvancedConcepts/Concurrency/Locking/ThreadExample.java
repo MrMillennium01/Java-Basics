@@ -1,26 +1,29 @@
 package AdvancedConcepts.Concurrency.Locking;
 
+import java.util.ArrayList;
+
 /**
  * synchronized
+ * lock objects can/should literally be anything except primitives, String or Wrapper classes
+ * this example is demonstrated on a locked queue
  */
 class ThreadExample {
-    private final int LOCKEDNUMBER;
+    ArrayList<Integer> queue = new ArrayList<>();
+    private final Object lock = new Object(); // this is the lock object
 
-    ThreadExample(){
-        this.LOCKEDNUMBER = 1;
+    void add(int e) throws InterruptedException {
+        synchronized (this.lock){
+            queue.add(e);
+            Thread.sleep(100);
+            System.out.println("Added at " + System.nanoTime());
+        }
     }
 
-    /**
-     * this method example shows, that you can write a method, which only grants access
-     * to a specific Object by a specific thread, so it is locked
-     * => basically a getter, but locked
-     * Also works as setter, generally, when you have data in an Object, which should not be accessed
-     * by other Threads, use synchronized()
-     * @return the int stored in the Object
-     */
-    void getExclusiveNumber(){
-        synchronized ((Object) LOCKEDNUMBER){
-            System.out.println(LOCKEDNUMBER);
+    int getFirst() throws InterruptedException {
+        synchronized (this.lock){
+            Thread.sleep(100);
+            System.out.println("Removed at " + System.nanoTime());
+            return queue.removeFirst();
         }
     }
 }

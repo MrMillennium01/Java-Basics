@@ -6,32 +6,31 @@ package AdvancedConcepts.Concurrency.Locking;
  * every Java Object has a monitor, which monitors which threads are accessind this
  * Object, so we can also control, which threads access a certain object
  * Usage: in finance for example, a System only has access to a database alone
+ *
+ * As you can see: all access to the queue is one-at-a-time
  */
-public class Main extends Thread{
+
+class Main extends Thread{
+    ThreadExample queue = new ThreadExample();
+
+    @Override
+    public void run() {
+        try {
+            queue.add(1);
+            queue.getFirst();
+            queue.add(2);
+            queue.getFirst();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public static void main(String[] args){
-        ThreadExample numObject = new ThreadExample();
-        numObject.getExclusiveNumber();
-
-        OtherThread thread = new OtherThread(numObject);
-        thread.start();
-    }
-}
-
-/**
- * not sure how to write code, so threads are run in parallel, so I can
- * demonstrate, how locking will prevent access for one thread
- */
-class OtherThread extends Thread {
-    Object numObject;
-
-    OtherThread(Object numObject){
-        this.numObject = numObject;
-    }
-
-    /**
-     * as you can see, this is not possible, since this is another thread
-     */
-    public void run(){
-        // numObject.getExclusiveNumber();
+        Thread a1 = new Main();
+        Thread a2 = new Main();
+        Thread a3 = new Main();
+        a1.start();
+        a2.start();
+        a3.start();
     }
 }
