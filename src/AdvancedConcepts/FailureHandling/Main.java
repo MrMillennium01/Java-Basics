@@ -1,15 +1,17 @@
 package AdvancedConcepts.FailureHandling;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
 /**
  * try-catch
+ * generally, try-catch is used for things not expected in a program run, like outside
+ * factors (e.g. streams, sockets, etc.)
+ * In many cases, you COULD also use if-else, but try-catch has it's perks there
  */
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExceptionExample {
         try {
             int result = 10 / 0; // This will trigger an ArithmeticException
             System.out.println("This will not be printed");
@@ -43,6 +45,9 @@ public class Main {
         } catch (IOException e) {
             System.err.println("FIle not found");
         }
+
+        throw new ExceptionExample("lol");
+        // this is how you can throw an exception, which will interrupt the program
     }
 }
 
