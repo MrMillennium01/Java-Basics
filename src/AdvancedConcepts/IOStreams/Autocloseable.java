@@ -10,12 +10,17 @@ import java.io.IOException;
  * so streams are really annoying
  * => there is an interface AutoClosable for stuff, e.g. streams
  */
-public class Autocloseable {
+public class Autocloseable implements AutoCloseable {
     public static void main(String[] args) {
         try (BufferedReader in = new BufferedReader(new FileReader("src/AdvancedConcepts/IOStreams/example.txt"))){
             // do something
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public void close() throws Exception {
+        // closes
     }
 }
