@@ -62,7 +62,7 @@ The project is organized into four main categories within the `src` folder:
 If you're new to Java, start with:
 1. `ImperativeProgramming/ArraysAndLoops.java` - Learn basic syntax
 2. `ImperativeProgramming/ClassMethods.java` - Understand methods
-3. `ObjectOrientedProgramming/BasicConcepts/` - Grasp OOP fundamentals
+3. `ObjectOrientedProgramming/BasicConcepts/ConstructorExample.java` - Grasp OOP fundamentals
 4. Then progress to more advanced topics as you build confidence
 
 Feel free to clone this repository and experiment with the code yourself!
