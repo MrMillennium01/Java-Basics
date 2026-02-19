@@ -1,16 +1,18 @@
 package ImperativeProgramming;
 
+import java.util.Arrays;
+
 public class ArraysAndLoops {
     public static void main(String[] args){
         System.out.println(15 + 29 + "lol" + 15 + 29);
 
         int[] newArr = {32, 4537, 4326, 5647854, 856, 9, 789};
 
-        System.out.println(java.util.Arrays.toString(newArr));
+        System.out.println(Arrays.toString(newArr));
 
         int [][][] twoDArr = {{{25, 3425}, {23, 236}}};
 
-        System.out.println(java.util.Arrays.deepToString(twoDArr));
+        System.out.println(Arrays.deepToString(twoDArr));
         System.out.println(twoDArr.length); // get length of array (only first depth, so not the whole dimensions)
 
         for (int element: newArr){ // like the for loop in python
