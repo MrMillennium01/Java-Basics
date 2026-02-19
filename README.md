@@ -30,7 +30,7 @@ The project is organized into four main categories within the `src` folder:
    git clone <https://github.com/MrMillennium01/Java-Basics.git>
    ```
 
-2. **Open the Project**: Open the project in your Java IDE (e.g., IntelliJ IDEA - they are free for everyone and students even get their premium features).
+2. **Open the Project**: Open the project in your Java IDE (e.g., IntelliJ IDEA - they are free for everyone and students even get their premium features for free).
 
 3. Theat's it, it's really not that deep.
 
